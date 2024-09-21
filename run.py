@@ -1,11 +1,16 @@
 from helpers import EncipheredMessage
-import constants as c
+
 
 def run():
     processor = EncipheredMessage()
-    processor.get_enciphered_text()
-    processor.count_chars()
-    processor.calculate_percentages()
+    print('Hacking message ...')
+    processor.getEncipheredMessage()
+    processor.hack()
+    print(processor.letterMapping)
+    print('Received enciphered message: \n' + processor.enciphered_message)
+    print('Hacked message:')
+    print(processor.decryptWithMapping())
+
 
 if __name__ == '__main__':
     run()
